@@ -24,12 +24,13 @@ local uber_table = {
     { name = "Doombringer", sno = 221017 },
     { name = "Harlequin Crest", sno = 609820 },
     { name = "Melted Heart of Selig", sno = 1275935 },
-    { name = "‍Ring of Starless Skies", sno = 1306338 },
+    { name = "Ring of Starless Skies", sno = 1306338 },
     { name = "Shroud of False Death", sno = 2059803 },
     { name = "Nesekem, the Herald", sno = 1982241 },
     { name = "Heir of Perdition", sno = 2059799 },
     { name = "Shattered Vow", sno = 2059813 }
 }
+
 
 function is_uber_item(sno_to_check)
     for _, entry in ipairs(uber_table) do
@@ -40,6 +41,7 @@ function is_uber_item(sno_to_check)
     return false
 end
 
+
 function salvage_low_greater_affix_items()
     local local_player = get_local_player()
     if not local_player then
@@ -47,19 +49,22 @@ function salvage_low_greater_affix_items()
     end
 
     local inventory_items = local_player:get_inventory_items()
-    local ga_threshold = settings.ga_threshold
+	local ga_threshold = settings.ga_threshold
     for _, inventory_item in pairs(inventory_items) do
         if inventory_item and not inventory_item:is_locked() then
             local display_name = inventory_item:get_display_name()
             local greater_affix_count = utils.get_greater_affix_count(display_name)
+            local item_id = inventory_item:get_sno_id()
 
-            -- Check if the item has less than ga_threshold greater affixes
-            if greater_affix_count < ga_threshold then
+
+            -- Check if the item is not an uber item and has less than ga_threshold greater affixes
+            if greater_affix_count < ga_threshold and not is_uber_item(item_id) then
                 loot_manager.salvage_specific_item(inventory_item)
             end
         end
     end
 end
+
 
 local town_salvage_task = {
     name = "Town Salvage",
