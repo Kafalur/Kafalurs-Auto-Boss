@@ -23,10 +23,6 @@ local function render_pulse()
         local px, py, pz = player_position:x(), player_position:y(), player_position:z()
         local draw_pos = vec3:new(px, py - 2, pz + 3)
         graphics.text_3d("Current Task: " .. current_task.name, draw_pos, 14, color_white(255))
-
-        -- Boss Run Informations
-        graphics.text_2d("Solved Runs: ".. settings.solved_runs, vec2:new(30, 100), 15, color_white(255))
-        graphics.text_2d("Found Ubers: ".. tostring(#settings.found_ubers), vec2:new(30, 115), 15, color_white(255))
     end
 end
 
