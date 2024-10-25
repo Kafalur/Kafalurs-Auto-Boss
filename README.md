@@ -4,21 +4,21 @@
 Kafalur's Auto Boss is a Lua script designed to automate boss farming in D4.
 
 ## Features
-Automatic boss dungeon navigation and exploration
-Combat management for bosses and monsters
-Inventory management (salvaging, selling)
-Customizable loot modes
-Stuck detection and recovery
-Task-based execution system
-GUI for easy configuration
+- Automatic boss dungeon navigation and exploration
+- Combat management for bosses and monsters
+- Inventory management (salvaging, selling)
+- Customizable loot modes
+- Stuck detection and recovery
+ -Task-based execution system
+- GUI for easy configuration
 
 ## Usage
-Move to the Bosslair which you want to farm.
-Enable the bot using the main toggle in the GUI.
+- Move to the Bosslair which you want to farm.
+ -Enable the bot using the main toggle in the GUI.
 
 ## Configure settings:
-Loot Mode: Choose between Nothing, Sell, Salvage, or Stash.**
-GA Counter: Set the number of Greater Affixes (GA) items to keep when Salvaging.
+- Loot Mode: Choose between Nothing, Sell, Salvage, or Stash.**
+- GA Counter: Set the number of Greater Affixes (GA) items to keep when Salvaging.
 
 ## How It Works
 1. The main script initializes and updates local variables.
