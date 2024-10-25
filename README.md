@@ -14,7 +14,7 @@ Kafalur's Auto Boss is a Lua script designed to automate boss farming in D4.
 
 ## Usage
 - Move to the Bosslair which you want to farm.
- -Enable the bot using the main toggle in the GUI.
+- Enable the bot using the main toggle in the GUI.
 
 ## Configure settings:
 - Loot Mode: Choose between Nothing, Sell, Salvage, or Stash.**
