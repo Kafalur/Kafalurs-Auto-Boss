@@ -1,5 +1,6 @@
 local gui = {}
-local plugin_label = "Kafalurs Auto Boss"
+local plugin_version = "1.0.1"
+local plugin_label = "Auto Boss | Kafalur | V" .. plugin_version
 
 local function create_checkbox(key)
     return checkbox:new(false, get_hash(plugin_label .. "_" .. key))
